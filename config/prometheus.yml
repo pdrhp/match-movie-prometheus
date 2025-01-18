@@ -7,4 +7,4 @@ scrape_configs:
     static_configs:
       - targets: ['${BACKEND_HOST}:${BACKEND_PORT}']
     metrics_path: '/metrics'
-    scheme: ${BACKEND_SCHEME} 
+    scheme: ${BACKEND_SCHEME}
