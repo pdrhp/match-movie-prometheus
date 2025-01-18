@@ -7,7 +7,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./config:/etc/prometheus    # Mudança aqui
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
@@ -20,7 +20,6 @@ services:
       - BACKEND_PORT=${BACKEND_PORT}
       - BACKEND_SCHEME=${BACKEND_SCHEME}
     restart: unless-stopped
-
 
 volumes:
   prometheus_data:
